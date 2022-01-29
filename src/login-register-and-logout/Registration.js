@@ -13,7 +13,6 @@ import {
   Spinner,
   Image,
 } from "react-bootstrap";
-import LoginWithGoogle from "../google-oauth/LoginWithGoogle";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Registration = () => {
@@ -161,9 +160,6 @@ const Registration = () => {
                           </Button>
                         )}
                       </Form>
-                    </Row>
-                    <Row align="center">
-                      <LoginWithGoogle />
                     </Row>
                   </Col>
                 </Row>
