@@ -90,9 +90,9 @@ const LogIn = () => {
                       </Row>
 
                       <Button
-                        variant="link"
+                        variant="light"
                         className="float-start"
-                        href="/register"
+                        onClick={() => navigate("/register")}
                       >
                         Create account
                       </Button>
