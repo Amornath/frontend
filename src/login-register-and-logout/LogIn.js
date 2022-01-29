@@ -10,7 +10,6 @@ import {
   Image,
   Spinner,
 } from "react-bootstrap";
-import LoginWithGoogle from "../google-oauth/LoginWithGoogle";
 
 const LogIn = () => {
   let navigate = useNavigate();
@@ -123,9 +122,6 @@ const LogIn = () => {
                         </Button>
                       )}
                     </Form>
-                  </Row>
-                  <Row align="center">
-                    <LoginWithGoogle />
                   </Row>
                 </Col>
               </Row>
