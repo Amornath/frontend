@@ -21,21 +21,25 @@ const LogIn = () => {
     event.preventDefault();
     var { email, password } = event.target;
     setLoading(true);
-    const response = await fetch("http://127.0.0.1:8000/api/user/login", {
-      body: JSON.stringify({
-        email: email.value,
-        password: password.value,
-      }),
-      headers: {
-        Accept: "*/*",
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-    });
+    const response = await fetch(
+      "https://simplor.herokuapp.com/api/user/login",
+      {
+        body: JSON.stringify({
+          email: email.value,
+          password: password.value,
+        }),
+        headers: {
+          Accept: "*/*",
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      }
+    );
 
     if (response.status === 200) {
       var result = await response.json();
-      localStorage.setItem("token", result.access_Token);
+      console.log(result);
+      localStorage.setItem("token", result.access);
       navigate("/crud");
       setLoading(false);
     } else {
